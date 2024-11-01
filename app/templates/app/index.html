@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Claro - Página Principal</title>
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+    <!-- Incluye algún framework CSS como Bootstrap o personaliza CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="{% static 'app/claro-logo.png' %}" alt="Claro Logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'modulo' numero=1 %}"><img src="{% static 'app/admission-icon.png' %}" alt="Admisión"> Admisión</a></li>
+                <li><a href="{% url 'modulo' numero=2 %}"><img src="{% static 'app/equipos-icon.png' %}" alt="Equipos"> Equipos</a></li>
+                <li><a href="{% url 'modulo' numero=3 %}"><img src="{% static 'app/recargas-icon.png' %}" alt="Recargas"> Recargas</a></li>
+                <li><a href="{% url 'modulo' numero=4 %}"><img src="{% static 'app/creditos-icon.png' %}" alt="Créditos"> Créditos</a></li>
+                <li><a href="{% url 'modulo' numero=5 %}"><img src="{% static 'app/cobranzas-icon.png' %}" alt="Cobranzas"> Cobranzas</a></li>
+                <li><a href="{% url 'modulo' numero=6 %}"><img src="{% static 'app/liquidacion-icon.png' %}" alt="Liquidación"> Liquidación</a></li>
+                <li><a href="{% url 'modulo' numero=7 %}"><img src="{% static 'app/reporteria-icon.png' %}" alt="Reportería"> Reportería</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            <div class="title-banner">
+                <h1>CRÉDITO Y COBRANZAS DE DISTRIBUIDORES</h1>
+            </div>
+            <div class="fondo-imagen">
+
+                <div class="cont-texto">
+                    <section class="parrafo-texto">
+
+                        <p>Claro Perú es subsidiaria de América Móvil, la empresa líder en servicios integrados de telecomunicaciones en Latinoamérica...</p>
+                        <p><em>"Mejorar la vida de los peruanos a través de las telecomunicaciones"</em></p>
+
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fondoImagen = document.querySelector('.fondo-imagen'); // Cambié la clase aquí
+            fondoImagen.style.backgroundImage = "url('{% static 'app/claro-torre.jpeg' %}')";
+        });
+    </script>
+</body>
+</html>
