@@ -18,6 +18,7 @@ def modulo(request, numero):
 
 # En views.py
 def tu_vista(request):
+
     modulos = [{'nombre': 'Admision', 'url': 'modulo', 'numero': 1},
                {'nombre': 'Equipos', 'url': 'modulo', 'numero': 2},
                {'nombre': 'Recargas', 'url': 'modulo', 'numero': 3},
@@ -29,5 +30,9 @@ def tu_vista(request):
 
               ]
     return render(request, 'app/index.html', {'modulos': modulos})
+
+
+
+
 
 
